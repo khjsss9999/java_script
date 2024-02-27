@@ -12,7 +12,7 @@ function hideDetail(){
 const open1 = document.querySelector("#open");
 const close1 = document.querySelector("#close");
 
-open1.addEventListener("click",()=>{
+open1.addEventListener("click",()=>{ 
   document.querySelector("#desc").style.display="block";
   document.querySelector("#open").style.display="none";	
 });
