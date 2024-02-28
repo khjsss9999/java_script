@@ -4,24 +4,24 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-	
-	
-</script>
-</head>
-<body>
-<script type="text/javascript">
 	function getUser(userId){
 		return new Promise((resolve,reject)=>{
-			setTimeout(() => {
+			setTimeout(()=>{
 				try {
-					resolve();
+					const user = userId === 1 ?	{id:userId,name:'nohssam'}: null;
+					resolve(user);
 				} catch (err) {
 					reject(err);
-				}
-			}, 1000);
+				}			
+			},1000);
 		});
 	}
 	
+
 </script>
+
+</head>
+<body>
+
 </body>
 </html>

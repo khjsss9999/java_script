@@ -22,6 +22,7 @@
 				try {
 					const user = userId === 1 ? {id:userId, name:'nohssam'}: null;	
 					resolve(user);
+					console.log('err1 : ');console.log('err1 : ');
 				} catch (err) {
 					reject(err);
 				}
@@ -37,6 +38,7 @@
 					const posts = [{id:1, title:"Post 1"},
 				           {id:2, title:"Post 2"}];
 					resolve(posts);
+					console.log('err2 : ');console.log('err2 : ');
 				} catch (err) {
 					reject(err);
 				}
@@ -49,6 +51,7 @@
 			setTimeout(() => {
 				try {
 					/* 나중에는 서버에서 정보를 받아서 저장 */
+					console.log('err3 : ');console.log('err3 : ');
 					const comments = [{id:1, text:"Comment 1"},
 			             {id:2, text:"Comment 2"},
 			             {id:3, text:"Comment 3"}];
@@ -75,11 +78,11 @@
 	runPromise();
 	 */
 	
-	async function runAsyncAwait(){
+	 function runAsyncAwait(){
 		 try {
-			const user = await getUser(1);
-			const posts = await getPosts(user.id);
-			const comments = await getComment(posts.id);
+			const user =  getUser(1);
+			const posts =  getPosts(user.id);
+			const comments =  getComment(posts.id);
 				console.log('user : ', user);
 				console.log('posts : ',posts);
 				console.log('comments : ', comments);
